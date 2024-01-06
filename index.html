@@ -11,40 +11,119 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="index.css" />
+    
 
     <title>Frontend Mentor | Blog preview card</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap");
+
+      body {
+        background-color: hsl(47, 88%, 63%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: "Figtree", sans-serif;
+        margin: 0 1.5rem;
+      }
+      .card {
+        background: hsl(0, 0%, 100%);
+        border: 1px solid hsl(0, 0%, 7%);
+        border-radius: 1.25rem;
+        width: 24rem;
+        padding: 1.5rem;
+        position: relative;
+      }
+
+      .card:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: hsl(0, 0%, 7%);
+        position: absolute;
+        z-index: -1;
+        top: 0.5rem;
+        left: 0.5rem;
+        border-radius: 1.25rem;
+        display: block;
+      }
+
+      .card img {
+        border-radius: 0.65rem;
+        width: 100%;
+        display: block;
+      }
+
+      .description {
+        line-height: 1.5;
+      }
+      a {
+        text-decoration: none;
+        color: hsl(0, 0%, 7%);
+      }
+
+      .tag {
+        background-color: hsl(47, 88%, 63%);
+        width: fit-content;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.25rem;
+        font-weight: 600;
+        margin-top: 1.5rem;
+      }
+
+      .date {
+        font-weight: 400;
+      }
+
+      p {
+        color: hsl(0, 0%, 50%);
+        font-size: 16px;
+        letter-spacing: 1px;
+      }
+      .by a {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+      }
+
+      h1 a:hover,
+      .by a:hover,
+      .date a:hover {
+        color: hsl(47, 88%, 63%);
+      }
+
+      .by img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 9999px;
+        margin-right: 0.5rem;
+      }
+    </style>
   </head>
   <body>
     <article class="card">
       <a href="#">
-        <img src="/assets/images/illustration-article.svg" alt="illustration">
+        <img src="/assets/images/illustration-article.svg" alt="illustration" />
       </a>
       <aside class="tag">
-        <a href="#">
-          Learning
-        </a>
+        <a href="#"> Learning </a>
       </aside>
       <h3 class="date">
-        <a href="#">
-          Published 6 Jan 2024
-        </a>
+        <a href="#"> Published 6 Jan 2024 </a>
       </h3>
       <h1 class="title">
-        <a href="#">
-          HTML & CSS foundations
-        </a>
+        <a href="#"> HTML & CSS foundations </a>
       </h1>
       <p class="description">
-        These languages are the backbone of every website, defining structure, content, and presentation.
+        These languages are the backbone of every website, defining structure,
+        content, and presentation.
       </p>
       <aside class="by">
         <a href="#">
-          <img src="/assets/images/image-avatar.webp" alt="profile">
+          <img src="/assets/images/image-avatar.webp" alt="profile" />
           Greg Hooper
         </a>
       </aside>
-
     </article>
   </body>
 </html>
